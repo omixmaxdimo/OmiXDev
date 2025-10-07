@@ -1,0 +1,13 @@
+{
+  "name": "OmiXdev Custom Nodes",
+  "description": "A collection of custom nodes for ComfyUI including Chat and Math nodes.",
+  "author": "Omid Ameri",
+  "contact": "Info@OmiX.IR",
+  "version": "0.1.0",
+  "folders": ["Chat", "Math"],
+  "nodes": {
+    "Chat": ["OmixChatPro.py"],
+    "Math": ["MathNode1.py", "MathNode2.py"]
+  },
+  "license": "MIT"
+}
