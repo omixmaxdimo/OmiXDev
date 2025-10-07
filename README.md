@@ -25,9 +25,16 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 3. Paste this repository link:
 		https://github.com/omixmaxdimo/OmiXDev
 4. Restart ComfyUI.
+5. cd .. ComfyUI/custome_codes/Omixdev/
+6. pip install -r requirements.txt
 
+   
 ### Method 2 — Manual Installation
 1. Download or clone the repo:
 2. ComyUI/custome_nodes/
 ```bash
 git clone https://github.com/omixmaxdimo/OmiXDev.git
+
+3. ComyUI/custome_nodes/OmixDec
+```bash
+pip install -r requirements.txt
