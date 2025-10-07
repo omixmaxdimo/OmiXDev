@@ -1,6 +1,6 @@
 {
   "name": "OmiXdev Custom Nodes",
-  "description": "A collection of custom nodes for ComfyUI including Chat and Math nodes.",
+  "description": "A collection of custom nodes, including Chat with API Key and Advanced Math nodes.",
   "author": "Omid Ameri",
   "contact": "Info@OmiX.IR",
   "version": "0.1.0",
