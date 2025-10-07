@@ -1,6 +1,6 @@
 # 👾 OmiXDev — Custom Nodes for ComfyUI
 
-A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix)**, focusing on **AI Chat** and **Math Processing** tools.
+A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)**, focusing on **AI Chat** and **Math Processing** tools.
 
 ---
 
