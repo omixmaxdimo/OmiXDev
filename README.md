@@ -1,7 +1,7 @@
 # 👾 OmiXDev — Custom Nodes for ComfyUI
 
 A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)**, focusing on **AI Chat** and **Math Processing** tools.
-
+🌍 https://www.OmiX.IR
 ---
 
 ## 📦 Features
@@ -16,6 +16,7 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 
 ---
 
+
 ## 🧰 Installation
 
 ### Method 1 — Using **ComfyUI Manager**
@@ -27,5 +28,6 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 
 ### Method 2 — Manual Installation
 1. Download or clone the repo:
+2. ComyUI/custome_nodes/
 ```bash
 git clone https://github.com/omixmaxdimo/OmiXDev.git
