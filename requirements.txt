@@ -1,0 +1,2 @@
+# Required libraries for OmiXdev ComfyUI Custom Nodes
+openai>=1.0.0
