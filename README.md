@@ -35,7 +35,4 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 2. ComyUI/custome_nodes/
 ```bash
 git clone https://github.com/omixmaxdimo/OmiXDev.git
-
-3. ComyUI/custome_nodes/OmixDec
-```bash
 pip install -r requirements.txt
