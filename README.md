@@ -1,5 +1,6 @@
 # 👾 OmiXDev — Custom Nodes for ComfyUI
 
+Online Chat  OpenAI(Gpt4xx) With Symple Node And API Key
 A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)**, focusing on **AI Chat** and **Math Processing** tools.
 🌍 https://www.OmiX.IR
 ---
