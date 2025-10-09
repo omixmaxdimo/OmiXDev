@@ -2,17 +2,17 @@ from openai import OpenAI
 
 class OmixChatPro:
     """
-    Node برای چت با OpenAI (کلید API به عنوان ورودی + تاریخچه + انتخاب مدل)
+    Node for chatting with OpenAI (API key input + history + model selection)
     """
 
-    chat_history = []  # ذخیره تاریخچه برای این نود
+    chat_history = []  # Store chat history for this node
 
     @classmethod
     def INPUT_TYPES(cls):
         return {
             "required": {
                 "api_key": ("STRING", {"multiline": False, "default": "🔑 sk-proj-xxxxxxxxx"}),
-                "user_message": ("STRING", {"multiline": True, "default": "شروع جت Start Chat "}),
+                "user_message": ("STRING", {"multiline": True, "default": "Start Chat"}),
                 "model": (["gpt-4.1-mini", "gpt-4.1", "gpt-4o-mini", "gpt-4o"], {"default": "gpt-4.1-mini"}),
             },
             "optional": {
@@ -35,15 +35,15 @@ class OmixChatPro:
             return ("", "\n".join(self.chat_history))
 
         if not api_key or not api_key.startswith("sk-"):
-            reply = "❌ لطفاً یک API Key معتبر وارد کنید."
+            reply = "❌ Please enter a valid API Key."
             return reply, "\n".join(self.chat_history)
 
         try:
             client = OpenAI(api_key=api_key)
 
-            # ساخت پیام‌ها
+            # Build messages
             if send_history and self.chat_history:
-                messages = [{"role": "system", "content": "تو یک دستیار مفید هستی و فارسی جواب می‌دهی."}]
+                messages = [{"role": "system", "content": "You are a helpful assistant and respond in Persian."}]
                 for line in self.chat_history:
                     if line.startswith("👤"):
                         messages.append({"role": "user", "content": line[2:].strip()})
@@ -52,7 +52,7 @@ class OmixChatPro:
                 messages.append({"role": "user", "content": user_message})
             else:
                 messages = [
-                    {"role": "system", "content": "تو یک دستیار مفید هستی و فارسی جواب می‌دهی."},
+                    {"role": "system", "content": "You are a helpful assistant and respond in English."},
                     {"role": "user", "content": user_message},
                 ]
 
@@ -62,9 +62,9 @@ class OmixChatPro:
             )
             reply = resp.choices[0].message.content.strip()
         except Exception as e:
-            reply = f"❌ خطا: {e}"
+            reply = f"❌ Error: {e}"
 
-        # اضافه به تاریخچه
+        # Add to history
         self.chat_history.append(f"👤 {user_message}")
         self.chat_history.append(f"🤖 {reply}")
 
