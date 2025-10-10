@@ -31,7 +31,7 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 cd ComfyUI/custom_nodes/OmiXDev
 pip install -r requirements.txt
 ```
-### 🔹 Method 1 — Manual Installation
+### 🔹 Method 2 — Manual Installation
 1. Open a terminal and run:
 ```bash
 cd ComfyUI/custom_nodes
