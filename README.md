@@ -9,8 +9,8 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 ## 📦 Features
 
 ### 💬 Chat Nodes
-- **OopenAI_Chat_API** — Online Chat with OpenAI gpt4x APIKey🔑, supports chat history, multiple models, and Persian text.
-- **ChatGrok** — Experimental chat interface using Grok-style prompts.
+- **Chat_OpenAI** — Online Chat with OpenAI gpt4x APIKey🔑, supports chat history, multiple models, and Persian text.
+- **Chat_Grok** — Experimental chat interface using Grok-style prompts.
 
 ### 🧮 Math Nodes
 - **CalcPanel** — Simple calculator node.
@@ -38,6 +38,6 @@ cd ComfyUI/custom_nodes
 git clone https://github.com/omixmaxdimo/OmiXDev.git
 cd OmiXDev
 pip install -r requirements.txt
-
+```
 🧑‍💻 Developed by OmiXDev
 💡 Powered by ComfyUI + OpenAI
