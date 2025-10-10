@@ -1,38 +1,43 @@
 # 👾 OmiXDev — Custom Nodes for ComfyUI
 
-Online Chat OpenAI(Gpt4xx) with OmiXDev Node and API Key.
-A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)**, focusing on **AI Chat** and **Math Processing** tools.
-🌍 https://www.OmiX.IR
+A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)** — focused on **AI Chat** and **Math Processing** tools.
+
+🌍 Website: [https://www.OmiX.IR](https://www.OmiX.IR)
+
 ---
 
 ## 📦 Features
 
-### 🔹 Chat Nodes
-- **OmixChatPro** — Chat with OpenAI API, supports history, multiple models, and Persian text.
+### 💬 Chat Nodes
+- **OopenAI_Chat_API** — Online Chat with OpenAI gpt4x APIKey🔑, supports chat history, multiple models, and Persian text.
 - **ChatGrok** — Experimental chat interface using Grok-style prompts.
 
-### 🔹 Math Nodes
+### 🧮 Math Nodes
 - **CalcPanel** — Simple calculator node.
-- **AdvancedCalc** — Extended calculator with more math operations.
+- **AdvancedCalc** — Extended calculator with advanced math operations.
 
 ---
 
-
 ## 🧰 Installation
 
-### Method 1 — Using **ComfyUI Manager**
-1. Open ComfyUI.
+### 🔹 Method 1 — Using ComfyUI Manager
+1. Open **ComfyUI**.
 2. Go to **Manager → Install Custom Nodes → From GitHub URL**.
-3. Paste this repository link:
-		https://github.com/omixmaxdimo/OmiXDev
-4. Restart ComfyUI.
-5. cd .. ComfyUI/custome_codes/Omixdev/
-6. pip install -r requirements.txt
-
-   
-### Method 2 — Manual Installation
-1. Download or clone the repo:
-2. ComyUI/custome_nodes/
+3. Paste this link:
+   https://github.com/omixmaxdimo/OmiXDev
+4. Restart **ComfyUI**.
+5. Open a terminal and run:
 ```bash
-git clone https://github.com/omixmaxdimo/OmiXDev.git
+cd ComfyUI/custom_nodes/OmiXDev
 pip install -r requirements.txt
+```
+### 🔹 Method 1 — Manual Installation
+1. Open a terminal and run:
+```bash
+cd ComfyUI/custom_nodes
+git clone https://github.com/omixmaxdimo/OmiXDev.git
+cd OmiXDev
+pip install -r requirements.txt
+
+🧑‍💻 Developed by OmiXDev
+💡 Powered by ComfyUI + OpenAI
