@@ -76,5 +76,6 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "OmixChatPro": "👾 OpenAI Chat OmiXDev"
+    "OmixChatPro": "👾 OpenAI Chat API 🔑"
 }
+
