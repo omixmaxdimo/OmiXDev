@@ -9,8 +9,9 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 ## 📦 Features
 
 ### 💬 Chat Nodes
-- **Chat_OpenAI** — Online Chat with OpenAI gpt4x APIKey🔑, supports chat history, multiple models, and Persian text.
-- **Chat_Grok** — Experimental chat interface using Grok-style prompts.
+- **Chat_OpenAI** — Online Chat with OpenAI Gpt4x APIKey🔑, supports chat history, multiple models, and Persian text.
+- **Chat_Gemini** —  Online Chat with Google Gemeni x APIKey🔑, supports chat history, multiple models, and Persian text.
+- **Chat_Grok** — ::: Comming Soon :::  Experimental chat interface using Grok-style prompts.
 
 ### 🧮 Math Nodes
 - **CalcPanel** — Simple calculator node.
