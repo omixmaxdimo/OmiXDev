@@ -1,5 +1,20 @@
-from .chat_OpenAI import OmixChatPro
-#from .chat_Grok import ChatGrok coming soon
+# 👾 OmiXDev/chat Chat Nodes for ComfyUI
+# Includes Gemini and OpenAI Chat APIs
 
-#from .chat_helper import *
+
+
+from .chat_OpenAI import NODE_CLASS_MAPPINGS as OPENAI_NODES, NODE_DISPLAY_NAME_MAPPINGS as OPENAI_DISPLAY
+from .chat_Gemini import NODE_CLASS_MAPPINGS as GEMINI_NODES, NODE_DISPLAY_NAME_MAPPINGS as GEMINI_DISPLAY
+
+# Merge both into one unified export for ComfyUI
+NODE_CLASS_MAPPINGS = {}
+NODE_DISPLAY_NAME_MAPPINGS = {}
+
+NODE_CLASS_MAPPINGS.update(OPENAI_NODES)
+NODE_CLASS_MAPPINGS.update(GEMINI_NODES)
+
+NODE_DISPLAY_NAME_MAPPINGS.update(OPENAI_DISPLAY)
+NODE_DISPLAY_NAME_MAPPINGS.update(GEMINI_DISPLAY)
+
+
 
