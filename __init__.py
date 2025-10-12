@@ -1,10 +1,16 @@
-from .Chat.chat_OpenAI import OmixChatPro
+# 👾 OmiXDev — Custom Nodes Package for ComfyUI
+# This package provides advanced AI-related nodes (Chat, Tools, etc.)
 
-NODE_CLASS_MAPPINGS = {
-    "OmixChatPro": OmixChatPro
+from .Chat import (
+    NODE_CLASS_MAPPINGS as CHAT_NODE_CLASS_MAPPINGS,
+    NODE_DISPLAY_NAME_MAPPINGS as CHAT_NODE_DISPLAY_NAME_MAPPINGS,
+)
 
-}
+# Register all nodes from Chat submodule
+NODE_CLASS_MAPPINGS = {}
+NODE_DISPLAY_NAME_MAPPINGS = {}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "OmixChatPro": "👾 OpenAI Chat API🔑"
-}
+NODE_CLASS_MAPPINGS.update(CHAT_NODE_CLASS_MAPPINGS)
+NODE_DISPLAY_NAME_MAPPINGS.update(CHAT_NODE_DISPLAY_NAME_MAPPINGS)
+
+
