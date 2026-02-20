@@ -1,3 +1,4 @@
 # Required libraries for OmiXdev ComfyUI Custom Nodes
 openai>=1.0.0
 google-genai
+ollama>=0.3.0
