@@ -15,6 +15,7 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 - **Chat_Grok** — ::: Comming Soon :::  Experimental chat interface using Grok-style prompts.
 
 ### 🧮 Math Nodes
+- **Resolution Presets** — List Of Usefull Visual Dimention HD FHD Squar:512x512
 - **CalcPanel** — Simple calculator node.
 - **AdvancedCalc** — Extended calculator with advanced math operations.
 
