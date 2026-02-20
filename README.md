@@ -8,7 +8,8 @@ A collection of advanced **ComfyUI Custom Nodes** made by **Omid Ameri (Omix.IR)
 
 ## 📦 Features
 
-### 💬 Chat Nodes
+### 💬 LLM Chat Nodes Offline local And Online with APIKey 
+- **Ollama** — Offline Chat with Local Ollama Package Requst 🦙, supports chat history, multiple models, and Persian text.
 - **Chat_OpenAI** — Online Chat with OpenAI Gpt4x APIKey🔑, supports chat history, multiple models, and Persian text.
 - **Chat_Gemini** —  Online Chat with Google Gemeni x APIKey🔑, supports chat history, multiple models, and Persian text.
 - **Chat_Grok** — ::: Comming Soon :::  Experimental chat interface using Grok-style prompts.
