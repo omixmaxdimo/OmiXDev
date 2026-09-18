@@ -1,0 +1,23 @@
+
+from .Chat.chat_OpenAI import OmixChatPro
+from .Chat.chat_Gemini import GeminiChatNode
+
+# Import Math Nodes
+#from .Math.calc_panel import CalcPanel
+#from .Math.advanced_calc import AdvancedCalc
+
+NODE_CLASS_MAPPINGS = {
+    "OmixChatPro": OmixChatPro,
+    "GeminiChatNode": GeminiChatNode, # ADDED MAPPING FOR GEMINI
+ #   "ChatGrok": ChatGrok,
+ #   "CalcPanel": CalcPanel,
+ #   "AdvancedCalc": AdvancedCalc,
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "OmixChatPro": "👾 OpenAI Chat API 🔑",
+    "GeminiChatNode": "👾 Gemini Chat API 🔑", # ADDED DISPLAY NAME FOR GEMINI
+ #   "ChatGrok": "Grok Chat Node",
+ #   "CalcPanel": "Calculator Panel",
+ #   "AdvancedCalc": "Advanced Calculator",
+}

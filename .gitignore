@@ -1,6 +1,14 @@
 __pycache__/
 *.pyc
-build/
+.env
+
+.idea/
+
+# Ignore OS-specific and editor-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build or test artifacts (if any)
 build/
 dist/
 *.egg-info/

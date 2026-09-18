@@ -1,7 +1,7 @@
 # Chat/__init__.py
 
 # 👾 OmiXDev/chat Chat Nodes for ComfyUI
-# Includes Gemini and OpenAI Chat APIs
+# Includes Gemini and OpenAI Chat APIs And Offline With Ollama
 
 # Chat/__init__.py
 
@@ -19,4 +19,6 @@ NODE_CLASS_MAPPINGS.update(OLLAMA_NODES)
 NODE_DISPLAY_NAME_MAPPINGS.update(OPENAI_DISPLAY)
 NODE_DISPLAY_NAME_MAPPINGS.update(GEMINI_DISPLAY)
 NODE_DISPLAY_NAME_MAPPINGS.update(OLLAMA_DISPLAY)
+
+
 

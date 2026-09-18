@@ -1,0 +1,96 @@
+from PIL import Image, ImageDraw, ImageFont
+import chess
+import numpy as np
+import torch
+
+
+class ChessBoardNode:
+    # وضعیت صفحه رو بیرون از کلاس یا به صورت متغیر استاتیک نگه می‌داریم تا ریست نشه
+    board = chess.Board()
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "move": ("STRING", {"multiline": False, "default": ""}),
+            }
+        }
+
+    RETURN_TYPES = ("IMAGE",)
+    FUNCTION = "render"
+    CATEGORY = "👾 OmiXDev/Games"
+
+    # اصلاح دیکشنری برای تفکیک بهتر
+    PIECE_UNICODE = {
+        (chess.PAWN, chess.WHITE): "♙",
+        (chess.ROOK, chess.WHITE): "♖",
+        (chess.KNIGHT, chess.WHITE): "♘",
+        (chess.BISHOP, chess.WHITE): "♗",
+        (chess.QUEEN, chess.WHITE): "♕",
+        (chess.KING, chess.WHITE): "♔",
+        (chess.PAWN, chess.BLACK): "♟",
+        (chess.ROOK, chess.BLACK): "♜",
+        (chess.KNIGHT, chess.BLACK): "♞",
+        (chess.BISHOP, chess.BLACK): "♝",
+        (chess.QUEEN, chess.BLACK): "♛",
+        (chess.KING, chess.BLACK): "♚",
+    }
+
+    def render(self, move):
+        move = str(move).strip()
+
+        if move:
+            try:
+                # سعی کن اول با SAN (مثل e4) امتحان کنه، اگه نشد با UCI (مثل e2e4)
+                try:
+                    self.board.push_san(move)
+                except:
+                    self.board.push_uci(move)
+            except Exception:
+                print(f"Invalid move: {move}")
+
+        square_size = 64
+        board_size = 8 * square_size
+        image = Image.new("RGB", (board_size, board_size), "#F0D9B5")
+        draw = ImageDraw.Draw(image)
+
+        # رسم خانه‌ها و مهره‌ها
+        colors = ["#F0D9B5", "#B58863"]
+        for r in range(8):
+            for c in range(8):
+                # رسم مربع
+                color = colors[(r + c) % 2]
+                draw.rectangle([c * square_size, r * square_size, (c + 1) * square_size, (r + 1) * square_size],
+                               fill=color)
+
+                # پیدا کردن مهره در این خانه
+                square = chess.square(c, 7 - r)
+                piece = self.board.piece_at(square)
+                if piece:
+                    piece_char = self.PIECE_UNICODE.get((piece.piece_type, piece.color), "?")
+                    # تنظیم رنگ فونت بر اساس رنگ مهره (اختیاری چون یونیکدها خودشون پر و خالی هستن)
+                    text_color = "white" if piece.color == chess.WHITE else "black"
+
+                    # رسم مهره (استفاده از فونت پیش‌فرض در صورت نبود فایل)
+                    draw.text((c * square_size + 10, r * square_size), piece_char, fill="black", font=None)
+
+        # --- اصلاح بخش اصلی (Tensor Format) ---
+        # ComfyUI expects: [Batch, Height, Width, Channels]
+        # values: 0.0 to 1.0
+
+        np_image = np.array(image).astype(np.float32) / 255.0  # تبدیل به float و نرمال‌سازی
+        tensor_image = torch.from_numpy(np_image).unsqueeze(0)  # اضافه کردن Batch: [1, H, W, C]
+
+        return (tensor_image,)
+
+
+
+
+# ثبت Node
+NODE_CLASS_MAPPINGS = {
+    "ChessBoardNode": ChessBoardNode
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "ChessBoardNode": "👾 OmiX Chess Board Renderer"
+}

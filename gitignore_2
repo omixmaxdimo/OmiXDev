@@ -1,0 +1,19 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+.venv/
+env/
+
+# Ignore environment variables and API keys
+.env
+
+# Ignore OS-specific and editor-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build or test artifacts (if any)
+build/
+dist/
+*.egg-info/

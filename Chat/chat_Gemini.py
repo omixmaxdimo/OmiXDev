@@ -81,10 +81,5 @@ class OmixGeminiPro:
 
 
 # ✅ Register node
-NODE_CLASS_MAPPINGS = {
-    "OmixGeminiPro": OmixGeminiPro
-}
-
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "OmixGeminiPro": "👾 Gemini Chat API 🔑"
-}
+NODE_CLASS_MAPPINGS = {"OmixGeminiPro": OmixGeminiPro}
+NODE_DISPLAY_NAME_MAPPINGS = {"OmixGeminiPro": "👾 Gemini Chat API 🔑"}
